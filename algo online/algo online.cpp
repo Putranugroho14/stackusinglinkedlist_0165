@@ -41,7 +41,11 @@ public:
 		if (top == NULL) {
 			cout << "List is empty." << endl;
 			}
-	
+		else {
+			
+
+
+
 
 int main()
 {
