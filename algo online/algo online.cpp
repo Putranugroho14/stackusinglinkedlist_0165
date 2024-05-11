@@ -37,10 +37,11 @@ public:
 		top = top->next;
 	}
 
+
 	void peek() {
 		if (top == NULL) {
 			cout << "List is empty." << endl;
-			}
+		}
 		else {
 			Node* current = top;
 			while (current != NULL) {
@@ -48,64 +49,63 @@ public:
 				current = current->next;
 			}
 			cout << endl;
-			}
 		}
-
-
-		bool isEmpty() {
-			return top == NULL;
-		}
-
-	};
-
-	int main() {
-		Stack stack;
-
-		int choice = 0;
-		int value;
-
-		while (choice != 5) {
-			cout << "1. Push\n";
-			cout << "2. Pop\n";
-			cout << "3. Peek\n";
-			cout << "4. Exit\n";
-			cout << "Enter your choice: ";
-			cin >> choice;
-
-			switch (choice) {
-			case 1:
-				cout << "Enter the value to push: ";
-				cin >> value;
-				stack.push(value);
-				break;
-			case 2:
-				if (!stack.isEmpty()) {
-					stack.pop();
-				}
-				else {
-					cout << "stack is empty. Cannot pop." << endl;
-				}
-				break;
-			case 3:
-				if (!stack.isEmpty()) {
-					stack.peek();
-				}
-				else {
-					cout << "Stack is empty. No top value." << endl;
-				}
-				break;
-
-			case 4:
-				cout << "Exiting program." << endl;
-				break;
-			default:
-				cout << "Invalid choice. Try again." << endl;
-				break;
-			}
-
-			cout << endl;
-		}
-
-		return 0;
 	}
 
+
+	bool isEmpty() {
+		return top == NULL;
+	}
+
+};
+
+int main() {
+	Stack stack;
+
+	int choice = 0;
+	int value;
+
+	while (choice != 5) {
+		cout << "1. Push\n";
+		cout << "2. Pop\n";
+		cout << "3. Peek\n";
+		cout << "4. Exit\n";
+		cout << "Enter your choice: ";
+		cin >> choice;
+
+		switch (choice) {
+		case 1:
+			cout << "Enter the value to push: ";
+			cin >> value;
+			stack.push(value);
+			break;
+		case 2:
+			if (!stack.isEmpty()) {
+				stack.pop();
+			}
+			else {
+				cout << "stack is empty. Cannot pop." << endl;
+			}
+			break;
+		case 3:
+			if (!stack.isEmpty()) {
+				stack.peek();
+			}
+			else {
+				cout << "Stack is empty. No top value." << endl;
+			}
+			break;
+
+		case 4:
+			cout << "Exiting program." << endl;
+			break;
+		default:
+			cout << "Invalid choice. Try again." << endl;
+			break;
+		}
+
+		cout << endl;
+	}
+
+	return 0;
+}
